@@ -253,13 +253,15 @@
 
         .pool-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+            max-width: 900px;
+            margin: 0 auto;
         }
 
         .pool-gallery img {
             width: 100%;
-            height: 220px;
+            height: 280px;
             object-fit: cover;
             border-radius: 6px;
             border: 1px solid rgba(82, 183, 136, 0.3);
@@ -472,7 +474,7 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .about-grid {
+            .about-grid, .pool-gallery {
                 grid-template-columns: 1fr;
             }
             .hero-content h1 {
@@ -545,11 +547,10 @@
                 <a href="#prices" class="btn" style="margin-top: 10px;">Check Pool Pricing</a>
             </div>
             
-            <!-- Real Pool Images Gallery -->
+            <!-- Two Selected Pool Images Gallery -->
             <div class="pool-gallery">
                 <img src="WhatsApp Image 2026-11-02 at 7.50.26 PM.jpeg" alt="Brishtibari Resort Pool View">
                 <img src="WhatsApp Image 2026-11-02 at 7.50.49 PM.jpeg" alt="Poolside and Tree Canopy View">
-                <img src="WhatsApp Image 2026-11-02 at 7.51.10 PM.jpeg" alt="Resort Pool Deck and Entrance">
             </div>
         </div>
     </section>
