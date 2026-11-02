@@ -223,35 +223,52 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.6);
         }
 
-        /* Main Attraction: Pool Showcase */
+        /* Main Attraction: Pool Showcase & Photo Gallery */
         .pool-showcase {
             background: linear-gradient(135deg, var(--forest-mid), var(--forest-vibrant));
             border: 1px solid rgba(82, 183, 136, 0.3);
             border-radius: 8px;
             padding: 50px;
             margin-bottom: 60px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
             box-shadow: 0 10px 40px rgba(0,0,0,0.5);
         }
 
-        .pool-showcase img {
-            width: 100%;
-            border-radius: 6px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        .pool-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
         }
 
         .pool-content h3 {
             color: var(--moss-green);
-            font-size: 30px;
+            font-size: 32px;
             margin-bottom: 15px;
         }
 
         .pool-content p {
             color: var(--text-muted);
-            margin-bottom: 20px;
+            margin-bottom: 15px;
+            font-size: 15px;
+        }
+
+        .pool-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .pool-gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 6px;
+            border: 1px solid rgba(82, 183, 136, 0.3);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+            transition: transform 0.3s ease;
+        }
+
+        .pool-gallery img:hover {
+            transform: scale(1.03);
         }
 
         /* Prices Section */
@@ -455,7 +472,7 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .about-grid, .pool-showcase {
+            .about-grid {
                 grid-template-columns: 1fr;
             }
             .hero-content h1 {
@@ -518,22 +535,26 @@
         </div>
     </section>
 
-    <!-- Main Attraction: The Swimming Pool -->
+    <!-- Main Attraction: The Swimming Pool & Photo Gallery -->
     <section id="pool">
         <div class="pool-showcase">
             <div class="pool-content">
                 <h3>The Crown Jewel: Emerald Oasis Pool</h3>
-                <p>The crown jewel of our property is the striking <strong>swimming pool</strong>, carved right into the green heart of the resort. Surrounded on all sides by dense forest trees and tea bushes, it is the ultimate spot to relax.</p>
-                <p>Take a refreshing swim surrounded by vibrating walls of green, or experience a bone-chilling night swim under the starlit sky while the jungle whispers secrets in the dark shadows around you.</p>
+                <p>The crown jewel of our property is the pristine, tiled swimming pool flanked by sleek black granite coping, stainless steel ladder handrails, and built-in floor grating. Framed by a secure boundary wall lined with decorative potted plants and an open-air view of towering jungle trees against a bright blue sky.</p>
+                <p>Whether taking a refreshing daytime dip or experiencing a bone-chilling night swim under the starlit canopy, this pool offers an unmatched aquatic sanctuary in the wilderness.</p>
                 <a href="#prices" class="btn" style="margin-top: 10px;">Check Pool Pricing</a>
             </div>
-            <div>
-                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Resort Swimming Pool surrounded by greenery">
+            
+            <!-- Real Pool Images Gallery -->
+            <div class="pool-gallery">
+                <img src="WhatsApp Image 2026-11-02 at 7.50.26 PM.jpeg" alt="Brishtibari Resort Pool View">
+                <img src="WhatsApp Image 2026-11-02 at 7.50.49 PM.jpeg" alt="Poolside and Tree Canopy View">
+                <img src="WhatsApp Image 2026-11-02 at 7.51.10 PM.jpeg" alt="Resort Pool Deck and Entrance">
             </div>
         </div>
     </section>
 
-    <!-- Prices Section (New) -->
+    <!-- Prices Section -->
     <section id="prices">
         <h2 class="section-title">Tariffs & <span>Pricing</span></h2>
         <p class="section-subtitle">Choose between our complete overnight stay package or poolside day passes</p>
