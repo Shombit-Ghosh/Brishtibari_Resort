@@ -254,6 +254,91 @@
             margin-bottom: 20px;
         }
 
+        /* Prices Section */
+        .prices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .price-card {
+            background: var(--card-bg);
+            border: 1px solid rgba(82, 183, 136, 0.2);
+            border-radius: 8px;
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            transition: transform 0.3s, border-color 0.3s;
+        }
+
+        .price-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--moss-green);
+        }
+
+        .price-card.featured {
+            border: 2px solid var(--gold-accent);
+            background: linear-gradient(145deg, #102619, #173822);
+        }
+
+        .price-badge {
+            position: absolute;
+            top: -15px;
+            right: 25px;
+            background: var(--gold-accent);
+            color: var(--forest-deep);
+            padding: 5px 15px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 20px;
+        }
+
+        .price-header h3 {
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .price-amount {
+            font-size: 36px;
+            font-family: 'Cinzel', serif;
+            color: var(--moss-green);
+            margin-bottom: 20px;
+        }
+
+        .price-card.featured .price-amount {
+            color: var(--gold-accent);
+        }
+
+        .price-amount span {
+            font-size: 14px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            color: var(--text-muted);
+        }
+
+        .price-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .price-features li {
+            margin-bottom: 12px;
+            color: var(--text-muted);
+            font-size: 14px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .price-features li i {
+            color: var(--moss-green);
+            margin-top: 4px;
+        }
+
         /* Amenities Grid */
         .amenities-grid {
             display: grid;
@@ -389,10 +474,11 @@
         <div class="nav-container">
             <div class="logo">Brishtibari <span>Resort</span></div>
             <ul class="nav-links">
-                <li><a href="#about">The Green Canopy</a></li>
+                <li><a href="#about">The Canopy</a></li>
                 <li><a href="#pool">Jungle Pool</a></li>
-                <li><a href="#amenities">Sanctuary Rooms</a></li>
-                <li><a href="#location">Deep Forest Roots</a></li>
+                <li><a href="#prices">Prices</a></li>
+                <li><a href="#amenities">Rooms</a></li>
+                <li><a href="#location">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -403,7 +489,7 @@
         <div class="hero-content">
             <h1>Brishtibari Resort</h1>
             <p>Completely enclosed by endless green tea bushes and towering canopies of the legendary Baikunthapur Forest. Where deep green meets raw, mysterious wilderness.</p>
-            <a href="#contact" class="btn">Step Into The Green</a>
+            <a href="#prices" class="btn">View Packages & Prices</a>
         </div>
     </section>
 
@@ -439,10 +525,50 @@
                 <h3>The Crown Jewel: Emerald Oasis Pool</h3>
                 <p>The crown jewel of our property is the striking <strong>swimming pool</strong>, carved right into the green heart of the resort. Surrounded on all sides by dense forest trees and tea bushes, it is the ultimate spot to relax.</p>
                 <p>Take a refreshing swim surrounded by vibrating walls of green, or experience a bone-chilling night swim under the starlit sky while the jungle whispers secrets in the dark shadows around you.</p>
-                <a href="#contact" class="btn" style="margin-top: 10px;">Reserve Your Stay</a>
+                <a href="#prices" class="btn" style="margin-top: 10px;">Check Pool Pricing</a>
             </div>
             <div>
                 <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Resort Swimming Pool surrounded by greenery">
+            </div>
+        </div>
+    </section>
+
+    <!-- Prices Section (New) -->
+    <section id="prices">
+        <h2 class="section-title">Tariffs & <span>Pricing</span></h2>
+        <p class="section-subtitle">Choose between our complete overnight stay package or poolside day passes</p>
+
+        <div class="prices-grid">
+            <!-- Portion 1: Room Booking with 4 Meals -->
+            <div class="price-card featured">
+                <div class="price-badge">Most Popular</div>
+                <div class="price-header">
+                    <h3>Overnight Jungle Stay</h3>
+                    <div class="price-amount">₹1,500 <span>/ person</span></div>
+                </div>
+                <ul class="price-features">
+                    <li><i class="fa-solid fa-check"></i> Cozy bedroom with private attached bathroom</li>
+                    <li><i class="fa-solid fa-check"></i> **4 Times Meals Daily** (Breakfast, Lunch, Evening Snacks & Dinner)</li>
+                    <li><i class="fa-solid fa-check"></i> Diverse rotating menu featuring local North Bengal specialties and multi-cuisine dishes</li>
+                    <li><i class="fa-solid fa-check"></i> Unlimited access to swimming pool and tea garden trails</li>
+                    <li><i class="fa-solid fa-check"></i> Immersive night jungle and wildlife experience</li>
+                </ul>
+                <a href="#contact" class="btn" style="text-align: center; display: block;">Book Room Stay</a>
+            </div>
+
+            <!-- Portion 2: Poolside Access -->
+            <div class="price-card">
+                <div class="price-header">
+                    <h3>Poolside Day Access</h3>
+                    <div class="price-amount">₹300 <span>/ person</span></div>
+                </div>
+                <ul class="price-features">
+                    <li><i class="fa-solid fa-check"></i> **2 Hours Access** to our crown-jewel emerald swimming pool</li>
+                    <li><i class="fa-solid fa-check"></i> Surrounded by tea gardens and deep forest canopy views</li>
+                    <li><i class="fa-solid fa-check"></i> Restaurant food & beverages available to order based on daily menu availability</li>
+                    <li><i class="fa-solid fa-check"></i> Perfect for day-trippers, relaxation, and quick refreshments</li>
+                </ul>
+                <a href="#contact" class="btn" style="text-align: center; display: block; background: transparent; border-color: var(--moss-green); color: #fff;">Book Pool Slot</a>
             </div>
         </div>
     </section>
@@ -461,7 +587,7 @@
             <div class="amenity-card">
                 <i class="fa-solid fa-utensils"></i>
                 <h3>In-House Restaurant</h3>
-                <p>Fresh, piping-hot meals prepared daily in our indoor dining space, allowing you to enjoy comforting food while the forest winds howl through the trees.</p>
+                <p>Fresh, piping-hot meals prepared daily with varied menu options, allowing you to enjoy comforting food while the forest winds howl through the trees.</p>
             </div>
             <div class="amenity-card">
                 <i class="fa-solid fa-moon"></i>
@@ -504,17 +630,17 @@
     <!-- Contact / Booking Section -->
     <section id="contact">
         <h2 class="section-title">Book Your <span>Green Escape</span></h2>
-        <p class="section-subtitle">Only 3 private rooms available for true nature and wildlife seekers</p>
+        <p class="section-subtitle">Secure your overnight rooms or poolside day slots today</p>
         
         <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--card-bg); padding: 40px; border-radius: 6px; border: 1px solid rgba(82, 183, 136, 0.3);">
-            <p style="margin-bottom: 30px; color: var(--text-muted);">Step away from civilization. Call or email to secure your stay among the tea gardens and deep jungle canopy.</p>
+            <p style="margin-bottom: 30px; color: var(--text-muted);">Step away from civilization. Call or email to reserve your overnight stay or poolside day pass.</p>
             <div style="font-size: 18px; margin-bottom: 15px; color: #fff;">
                 <i class="fa-solid fa-phone" style="color: var(--moss-green); margin-right: 10px;"></i> <strong>Phone:</strong> +91 XXXXX XXXXX
             </div>
             <div style="font-size: 18px; margin-bottom: 30px; color: #fff;">
                 <i class="fa-solid fa-envelope" style="color: var(--moss-green); margin-right: 10px;"></i> <strong>Email:</strong> greenstay@brishtibariresort.com
             </div>
-            <a href="tel:+910000000000" class="btn"><i class="fa-solid fa-headset" style="margin-right: 8px;"></i> Call to Book</a>
+            <a href="tel:+910000000000" class="btn"><i class="fa-solid fa-headset" style="margin-right: 8px;"></i> Call to Reserve</a>
         </div>
     </section>
 
@@ -529,7 +655,7 @@
                 <h3>Quick Navigation</h3>
                 <a href="#about">The Green Canopy</a>
                 <a href="#pool">Emerald Pool</a>
-                <a href="#amenities">Sanctuary Rooms</a>
+                <a href="#prices">Prices & Packages</a>
                 <a href="#contact">Reservations</a>
             </div>
             <div class="footer-col">
