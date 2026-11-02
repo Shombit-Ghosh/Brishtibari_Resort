@@ -364,7 +364,7 @@
             border: 1px solid rgba(82, 183, 136, 0.3);
             border-radius: 12px;
             padding: 40px;
-            max-width: 750px;
+            max-width: 800px;
             margin: 0 auto 60px auto;
             text-align: center;
             box-shadow: 0 15px 40px rgba(0,0,0,0.7);
@@ -373,7 +373,7 @@
         .map-container-custom {
             position: relative;
             width: 100%;
-            height: 480px;
+            height: 520px;
             background: #08170e;
             border-radius: 8px;
             overflow: hidden;
@@ -385,23 +385,24 @@
         }
 
         .map-svg-bg {
-            width: 70%;
-            height: 90%;
-            filter: drop-shadow(0 0 10px rgba(82,183,136,0.2));
+            width: 80%;
+            height: 95%;
+            filter: drop-shadow(0 0 12px rgba(82,183,136,0.25));
         }
 
         /* Map Labels Overlays */
         .wb-label {
             position: absolute;
             font-size: 12px;
-            color: var(--text-muted);
+            color: var(--text-light);
             font-weight: 500;
             text-align: center;
             pointer-events: none;
-            background: rgba(7, 20, 12, 0.85);
-            padding: 3px 8px;
-            border-radius: 4px;
-            border: 1px solid rgba(82,183,136,0.2);
+            background: rgba(7, 20, 12, 0.9);
+            padding: 4px 10px;
+            border-radius: 6px;
+            border: 1px solid rgba(82,183,136,0.3);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
         }
 
         .wb-label span {
@@ -412,7 +413,7 @@
         }
 
         .wb-label.destination {
-            background: rgba(212, 175, 55, 0.15);
+            background: rgba(212, 175, 55, 0.2);
             border-color: var(--gold-accent);
             color: #fff;
             font-weight: 700;
@@ -688,37 +689,37 @@
             <!-- Custom West Bengal Map Container -->
             <div class="map-container-custom">
                 <!-- SVG West Bengal State Outline Map -->
-                <svg class="map-svg-bg" viewBox="0 0 350 550" xmlns="http://www.w3.org/2000/svg">
-                    <!-- Stylized West Bengal shape outline (narrow northern sub-himalayan corridor expanding down to southern delta) -->
-                    <path d="M150,20 C165,30 175,45 160,65 C145,85 170,105 185,120 C170,140 150,155 165,180 C185,200 210,220 220,250 C230,280 200,310 180,340 C160,370 175,400 150,430 C130,455 105,480 90,520 C110,530 130,510 145,490 C165,465 190,440 205,410 C220,380 245,350 255,310 C265,270 240,240 225,210 C210,180 225,150 205,120 C190,95 200,65 180,45 C165,30 155,20 150,20 Z" fill="#133822" stroke="#52b788" stroke-width="2"/>
+                <svg class="map-svg-bg" viewBox="0 0 400 600" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Complete West Bengal State Geographic Vector Outline -->
+                    <path d="M180,25 C195,35 210,50 195,75 C180,95 205,115 220,135 C200,160 175,180 190,210 C210,230 240,250 250,285 C260,320 220,355 200,390 C175,425 195,460 170,495 C145,525 120,555 100,580 C125,590 150,570 170,540 C195,510 225,480 245,445 C265,410 295,375 305,335 C315,295 285,260 265,225 C245,190 265,155 240,125 C220,100 235,70 210,45 C195,30 185,25 180,25 Z" fill="#133822" stroke="#52b788" stroke-width="2.5"/>
                     
-                    <!-- Dashed Pointer Lines converging from Kolkata, Darjeeling, Siliguri, Jalpaiguri, Gajoldoba to Bodaganj (North Bengal cluster ~ X:175, Y:115) -->
-                    <line x1="130" y1="500" x2="175" y2="115" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/> <!-- Kolkata -->
-                    <line x1="85" y1="100" x2="175" y2="115" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/>  <!-- Darjeeling -->
-                    <line x1="120" y1="130" x2="175" y2="115" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/>  <!-- Siliguri -->
-                    <line x1="210" y1="120" x2="175" y2="115" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/>  <!-- Jalpaiguri -->
-                    <line x1="165" y1="95" x2="175" y2="115" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/>   <!-- Gajoldoba -->
+                    <!-- Clean, fully landed dashed pointer lines converging from Kolkata, Darjeeling, Siliguri, Jalpaiguri, and Gajoldoba to Bodaganj (~ X:200, Y:130) -->
+                    <line x1="135" y1="560" x2="200" y2="130" stroke="#d4af37" stroke-width="1.8" stroke-dasharray="5,5"/> <!-- Kolkata (South) -->
+                    <line x1="95" y1="110" x2="200" y2="130" stroke="#d4af37" stroke-width="1.8" stroke-dasharray="5,5"/>  <!-- Darjeeling (North-West) -->
+                    <line x1="140" y1="145" x2="200" y2="130" stroke="#d4af37" stroke-width="1.8" stroke-dasharray="5,5"/>  <!-- Siliguri (North) -->
+                    <line x1="260" y1="135" x2="200" y2="130" stroke="#d4af37" stroke-width="1.8" stroke-dasharray="5,5"/>  <!-- Jalpaiguri (North-East) -->
+                    <line x1="195" y1="105" x2="200" y2="130" stroke="#d4af37" stroke-width="1.8" stroke-dasharray="5,5"/>   <!-- Gajoldoba (North) -->
 
                     <!-- Target Pulse Destination Marker at Bodaganj -->
-                    <circle cx="175" cy="115" r="10" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.9"/>
-                    <circle cx="175" cy="115" r="4" fill="#d4af37"/>
+                    <circle cx="200" cy="130" r="11" fill="none" stroke="#d4af37" stroke-width="2" opacity="0.95"/>
+                    <circle cx="200" cy="130" r="4.5" fill="#d4af37"/>
                 </svg>
 
-                <!-- City & Hub Labels Positioned Accurately on WB Map -->
+                <!-- Fully Landed City & Hub Labels Positioned Accurately on WB Map -->
                 <!-- Kolkata (South) -->
-                <div class="wb-label" style="bottom: 8%; left: 32%;">
+                <div class="wb-label" style="bottom: 8%; left: 22%;">
                     Kolkata <span>~585 km</span>
                 </div>
                 <!-- Darjeeling (North-West) -->
-                <div class="wb-label" style="top: 15%; left: 5%;">
+                <div class="wb-label" style="top: 15%; left: 4%;">
                     Darjeeling <span>~80 km</span>
                 </div>
                 <!-- Siliguri (North) -->
-                <div class="wb-label" style="top: 25%; left: 22%;">
+                <div class="wb-label" style="top: 24%; left: 22%;">
                     Siliguri <span>~38 km</span>
                 </div>
-                <!-- Gajoldoba (North-East) -->
-                <div class="wb-label" style="top: 17%; right: 28%;">
+                <!-- Gajoldoba (North) -->
+                <div class="wb-label" style="top: 13%; left: 42%;">
                     Gajoldoba <span>~25 km</span>
                 </div>
                 <!-- Jalpaiguri (North-East) -->
@@ -727,8 +728,8 @@
                 </div>
 
                 <!-- Destination Marker Label -->
-                <div class="wb-label destination" style="top: 36%; left: 52%;">
-                    Bhramri Devi Temple <span style="color:var(--gold-accent);">Bodaganj, Jalpaiguri (3km)</span>
+                <div class="wb-label destination" style="top: 32%; left: 54%;">
+                    Bhramri Devi Temple <span style="color:var(--gold-accent);">Bodaganj (3km)</span>
                 </div>
             </div>
 
