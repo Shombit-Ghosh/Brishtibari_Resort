@@ -3,49 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brishtibari Resort | Deep Forest & Tea Garden Retreat in Jalpaiguri</title>
+    <title>Brishtibari Resort | Deep Forest & Tea Garden Sanctuary</title>
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <style>
         :root {
-            --primary: #122818; /* Deep Midnight Jungle Green */
-            --secondary: #c29b38; /* Warm Amber/Torchlight Gold */
-            --dark: #0d0f0e;
-            --light: #161b18;
-            --text-light: #e0e0e0;
-            --accent-glow: rgba(194, 155, 56, 0.4);
+            --forest-deep: #07140c;
+            --forest-mid: #132e1e;
+            --forest-vibrant: #1e4d30;
+            --leaf-green: #2d6a4f;
+            --moss-green: #52b788;
+            --gold-accent: #d4af37;
+            --text-light: #f1faee;
+            --text-muted: #c1d3c4;
+            --card-bg: #102619;
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Plus Jakarta Sans', sans-serif;
         }
 
         body {
-            background-color: var(--dark);
+            background-color: var(--forest-deep);
             color: var(--text-light);
-            line-height: 1.7;
+            line-height: 1.8;
         }
 
         h1, h2, h3, h4 {
             font-family: 'Cinzel', serif;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         /* Header & Navbar */
         header {
-            background: rgba(13, 15, 14, 0.95);
-            border-bottom: 1px solid rgba(194, 155, 56, 0.2);
+            background: rgba(7, 20, 12, 0.92);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(82, 183, 136, 0.15);
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.8);
         }
 
         .nav-container {
@@ -66,7 +69,7 @@
         }
 
         .logo span {
-            color: var(--secondary);
+            color: var(--moss-green);
         }
 
         .nav-links {
@@ -76,67 +79,67 @@
         }
 
         .nav-links a {
-            color: var(--text-light);
+            color: var(--text-muted);
             text-decoration: none;
             font-weight: 400;
             transition: color 0.3s;
-            font-size: 14px;
+            font-size: 13px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
         .nav-links a:hover {
-            color: var(--secondary);
+            color: var(--moss-green);
         }
 
         /* Hero Section */
         .hero {
             height: 100vh;
-            background: linear-gradient(rgba(13, 15, 14, 0.7), rgba(13, 15, 14, 0.9)), url('https://images.unsplash.com/photo-1511497584788-876761142212?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(7, 20, 12, 0.5), rgba(7, 20, 12, 0.85)), url('https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
             color: white;
             padding: 0 20px;
-            position: relative;
         }
 
         .hero-content h1 {
-            font-size: 52px;
+            font-size: 50px;
             margin-bottom: 15px;
             color: #fff;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+            text-shadow: 0 2px 15px rgba(0,0,0,0.8);
         }
 
         .hero-content p {
-            font-size: 18px;
+            font-size: 17px;
             margin-bottom: 30px;
             font-weight: 300;
-            max-width: 750px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            color: #cccccc;
+            color: var(--text-muted);
         }
 
         .btn {
             display: inline-block;
-            background: var(--secondary);
-            color: var(--dark);
+            background: var(--leaf-green);
+            color: #fff;
             padding: 14px 32px;
             border-radius: 4px;
             text-decoration: none;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            border: 1px solid var(--moss-green);
             transition: all 0.3s ease;
-            box-shadow: 0 0 15px var(--accent-glow);
         }
 
         .btn:hover {
-            background: #d8b04a;
+            background: var(--moss-green);
+            color: var(--forest-deep);
             transform: translateY(-2px);
-            box-shadow: 0 0 25px rgba(194, 155, 56, 0.6);
+            box-shadow: 0 0 20px rgba(82, 183, 136, 0.4);
         }
 
         /* Section Styling */
@@ -148,83 +151,27 @@
 
         .section-title {
             text-align: center;
-            font-size: 38px;
+            font-size: 36px;
             color: #fff;
             margin-bottom: 10px;
         }
 
         .section-title span {
-            color: var(--secondary);
+            color: var(--moss-green);
         }
 
         .section-subtitle {
             text-align: center;
-            color: #999;
+            color: var(--text-muted);
             margin-bottom: 50px;
-            font-size: 16px;
+            font-size: 15px;
         }
 
-        /* About / Wilderness Section */
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1.1fr 0.9fr;
-            gap: 50px;
-            align-items: center;
-        }
-
-        .about-text h3 {
-            font-size: 26px;
-            color: var(--secondary);
-            margin-bottom: 20px;
-        }
-
-        .about-text p {
-            margin-bottom: 15px;
-            color: #c0c0c0;
-        }
-
-        .about-img img {
-            width: 100%;
-            border-radius: 6px;
-            border: 1px solid rgba(194, 155, 56, 0.3);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.7);
-        }
-
-        /* Highlight Feature: The Pool */
-        .pool-showcase {
-            background: linear-gradient(135deg, #101c14, #1b2e20);
-            border: 1px solid rgba(194, 155, 56, 0.2);
-            border-radius: 8px;
-            padding: 50px;
-            margin-bottom: 60px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            align-items: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
-        }
-
-        .pool-showcase img {
-            width: 100%;
-            border-radius: 6px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-        }
-
-        .pool-content h3 {
-            color: var(--secondary);
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
-
-        .pool-content p {
-            color: #d0d0d0;
-            margin-bottom: 20px;
-        }
-
-        /* Wildlife & Nightlife Warnings/Vibes Alert Box */
+        /* Wilderness & Wildlife Alert Box */
         .wilderness-alert {
-            background: rgba(25, 18, 15, 0.9);
-            border-left: 4px solid #b33939;
+            background: rgba(19, 46, 30, 0.7);
+            border: 1px solid rgba(82, 183, 136, 0.3);
+            border-left: 4px solid var(--gold-accent);
             padding: 30px;
             border-radius: 0 6px 6px 0;
             margin-bottom: 60px;
@@ -234,20 +181,77 @@
         }
 
         .wilderness-alert i {
-            font-size: 32px;
-            color: #ff5252;
-            margin-top: 5px;
+            font-size: 30px;
+            color: var(--gold-accent);
+            margin-top: 3px;
         }
 
         .wilderness-alert h4 {
-            color: #ff5252;
-            font-size: 20px;
+            color: var(--gold-accent);
+            font-size: 18px;
             margin-bottom: 8px;
         }
 
         .wilderness-alert p {
-            color: #bbb;
+            color: var(--text-muted);
             font-size: 14px;
+        }
+
+        /* About / Forest Grid */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 26px;
+            color: var(--moss-green);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+        }
+
+        .about-img img {
+            width: 100%;
+            border-radius: 6px;
+            border: 1px solid rgba(82, 183, 136, 0.3);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+        }
+
+        /* Main Attraction: Pool Showcase */
+        .pool-showcase {
+            background: linear-gradient(135deg, var(--forest-mid), var(--forest-vibrant));
+            border: 1px solid rgba(82, 183, 136, 0.3);
+            border-radius: 8px;
+            padding: 50px;
+            margin-bottom: 60px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+
+        .pool-showcase img {
+            width: 100%;
+            border-radius: 6px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        }
+
+        .pool-content h3 {
+            color: var(--moss-green);
+            font-size: 30px;
+            margin-bottom: 15px;
+        }
+
+        .pool-content p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
         }
 
         /* Amenities Grid */
@@ -258,8 +262,8 @@
         }
 
         .amenity-card {
-            background: var(--light);
-            border: 1px solid rgba(255,255,255,0.05);
+            background: var(--card-bg);
+            border: 1px solid rgba(82, 183, 136, 0.15);
             padding: 35px 30px;
             border-radius: 6px;
             text-align: center;
@@ -268,12 +272,12 @@
 
         .amenity-card:hover {
             transform: translateY(-5px);
-            border-color: var(--secondary);
+            border-color: var(--moss-green);
         }
 
         .amenity-card i {
             font-size: 38px;
-            color: var(--secondary);
+            color: var(--moss-green);
             margin-bottom: 20px;
         }
 
@@ -284,14 +288,14 @@
         }
 
         .amenity-card p {
-            color: #aaa;
+            color: var(--text-muted);
             font-size: 13px;
         }
 
-        /* Location / Highlights */
+        /* Location Box */
         .location-box {
-            background: var(--light);
-            border: 1px solid rgba(255,255,255,0.05);
+            background: var(--card-bg);
+            border: 1px solid rgba(82, 183, 136, 0.15);
             padding: 40px;
             border-radius: 6px;
             display: flex;
@@ -307,7 +311,7 @@
 
         .location-item i {
             font-size: 26px;
-            color: var(--secondary);
+            color: var(--moss-green);
             margin-top: 3px;
         }
 
@@ -317,14 +321,14 @@
         }
 
         .location-item p {
-            color: #aaa;
+            color: var(--text-muted);
             font-size: 14px;
         }
 
         /* Contact & Footer */
         footer {
-            background: #080a09;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            background: #040a07;
+            border-top: 1px solid rgba(82, 183, 136, 0.15);
             color: white;
             padding: 60px 20px 20px;
         }
@@ -339,13 +343,13 @@
         }
 
         .footer-col h3 {
-            color: var(--secondary);
+            color: var(--moss-green);
             margin-bottom: 20px;
             font-size: 18px;
         }
 
         .footer-col p, .footer-col a {
-            color: #999;
+            color: var(--text-muted);
             text-decoration: none;
             display: block;
             margin-bottom: 10px;
@@ -353,14 +357,14 @@
         }
 
         .footer-col a:hover {
-            color: var(--secondary);
+            color: #fff;
         }
 
         .copyright {
             text-align: center;
-            border-top: 1px solid rgba(255,255,255,0.05);
+            border-top: 1px solid rgba(82, 183, 136, 0.15);
             padding-top: 20px;
-            color: #666;
+            color: #73947b;
             font-size: 13px;
         }
 
@@ -370,7 +374,7 @@
                 grid-template-columns: 1fr;
             }
             .hero-content h1 {
-                font-size: 36px;
+                font-size: 34px;
             }
             .nav-links {
                 display: none;
@@ -385,10 +389,10 @@
         <div class="nav-container">
             <div class="logo">Brishtibari <span>Resort</span></div>
             <ul class="nav-links">
-                <li><a href="#about">The Wild</a></li>
-                <li><a href="#pool">The Pool</a></li>
-                <li><a href="#amenities">Accommodations</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><a href="#about">The Green Canopy</a></li>
+                <li><a href="#pool">Jungle Pool</a></li>
+                <li><a href="#amenities">Sanctuary Rooms</a></li>
+                <li><a href="#location">Deep Forest Roots</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -398,32 +402,32 @@
     <section class="hero">
         <div class="hero-content">
             <h1>Brishtibari Resort</h1>
-            <p>Deep within the impenetrable heart of the Baikunthapur Forest and sprawling tea gardens. Where bone-chilling midnight mysteries meet untamed wildlife encounters.</p>
-            <a href="#contact" class="btn">Venture Inside</a>
+            <p>Completely enclosed by endless green tea bushes and towering canopies of the legendary Baikunthapur Forest. Where deep green meets raw, mysterious wilderness.</p>
+            <a href="#contact" class="btn">Step Into The Green</a>
         </div>
     </section>
 
-    <!-- About Section: Dense Jungle & Elephant Territory -->
+    <!-- About Section: Immersive Forest & Wildlife Experience -->
     <section id="about">
-        <h2 class="section-title">Embrace the <span>Wilderness</span></h2>
-        <p class="section-subtitle">Surrounded by towering canopies, tea bushes, and nocturnal shadows</p>
+        <h2 class="section-title">Surrounded By <span>Deep Foliage</span></h2>
+        <p class="section-subtitle">Immerse yourself in absolute greenery, mist, and untamed jungle life</p>
         
         <div class="wilderness-alert">
-            <i class="fa-solid fa-triangle-exclamation"></i>
+            <i class="fa-solid fa-tree-city"></i>
             <div>
-                <h4>Untamed Territory: Wild Elephant Crossings</h4>
-                <p>Brishtibari is located in an active migratory and foraging corridor within the Baikunthapur Forest. It is common for majestic wild elephants to visit the property boundaries under the cover of dusk. Nightlife here is intensely bone-chilling, immersive, and purely raw—accompanied by rustling forest canopies, distant calls, and absolute isolation from the city lights.</p>
+                <h4>Raw Forest Living & Wild Elephant Visits</h4>
+                <p>Brishtibari is completely enveloped by the dense, untouched cover of the Baikunthapur forest. Living here means absolute closeness to rich green nature. Under the cover of twilight and midnight silence, majestic wild elephants frequently cross through the perimeter, giving you a thrilling, bone-chillingly authentic encounter with the wild.</p>
             </div>
         </div>
 
         <div class="about-grid">
             <div class="about-text">
-                <h3>Where Mist, Tea Gardens, and Darkness Meet</h3>
-                <p>Welcome to <strong>Brishtibari Resort</strong>, isolated in the deep core of Bodagonj, Jalpaiguri. By day, enjoy the tranquil breeze rolling over miles of endless green tea leaves. By night, the atmosphere transforms into a deeply mysterious, eerie, and atmospheric wilderness.</p>
-                <p>With zero urban light pollution, the night sky is breathtakingly clear, yet heavy with the spine-tingling thrill of living right alongside the deep jungle. Listen to the symphony of nocturnal predators, insects, and occasional heavy footsteps outside your window.</p>
+                <h3>Living Inside a Living Green Canopy</h3>
+                <p>At <strong>Brishtibari Resort</strong>, greenery isn't just a view—it's an atmosphere you live inside. Every window opens up to rolling waves of dark green tea gardens merging directly into towering ancient trees and emerald ferns.</p>
+                <p>When rain falls through the thick overhead canopy, the forest comes alive with the earthy scent of wet moss and rustling leaves. By night, the dense foliage creates an eerily quiet, mysterious ambiance, far removed from the noise of civilization.</p>
             </div>
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1511497584788-876761142212?auto=format&fit=crop&w=800&q=80" alt="Dense Jungle Forest">
+                <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80" alt="Dense green forest canopy">
             </div>
         </div>
     </section>
@@ -432,37 +436,37 @@
     <section id="pool">
         <div class="pool-showcase">
             <div class="pool-content">
-                <h3>The Crown Jewel: Jungle Oasis Pool</h3>
-                <p>The undisputed heart of Brishtibari Resort is our stunning <strong>swimming pool</strong>. Situated directly between the shadows of the dense Baikunthapur jungle and the edge of the tea garden, it offers a surreal swimming experience.</p>
-                <p>Float under the moonlight with the dense forest surrounding you on all sides. Whether you're taking a cool morning dip wrapped in thick jungle mist or stargazing during a bone-chilling night swim, this pool delivers an unforgettable adventure.</p>
-                <a href="#contact" class="btn" style="margin-top: 10px;">Book Your Night Swim</a>
+                <h3>The Crown Jewel: Emerald Oasis Pool</h3>
+                <p>The crown jewel of our property is the striking <strong>swimming pool</strong>, carved right into the green heart of the resort. Surrounded on all sides by dense forest trees and tea bushes, it is the ultimate spot to relax.</p>
+                <p>Take a refreshing swim surrounded by vibrating walls of green, or experience a bone-chilling night swim under the starlit sky while the jungle whispers secrets in the dark shadows around you.</p>
+                <a href="#contact" class="btn" style="margin-top: 10px;">Reserve Your Stay</a>
             </div>
             <div>
-                <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=800&q=80" alt="Resort Swimming Pool at Night">
+                <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80" alt="Resort Swimming Pool surrounded by greenery">
             </div>
         </div>
     </section>
 
     <!-- Rooms & Amenities Grid -->
     <section id="amenities">
-        <h2 class="section-title">Shelter in the <span>Wild</span></h2>
-        <p class="section-subtitle">Private luxury amidst the raw and rugged environment</p>
+        <h2 class="section-title">Green Sanctuary <span>Amenities</span></h2>
+        <p class="section-subtitle">Comfortable shelter built seamlessly into the wilderness</p>
         
         <div class="amenities-grid">
             <div class="amenity-card">
-                <i class="fa-solid fa-bed"></i>
-                <h3>3 Secure Bedrooms</h3>
-                <p>Three exclusive, warmly-lit bedrooms with attached modern bathrooms, heavy wooden shutters, and secure, cozy interiors to keep you safe from the dark jungle outside.</p>
+                <i class="fa-solid fa-house-chimney-window"></i>
+                <h3>3 Forest-View Bedrooms</h3>
+                <p>Three cozy, heavily-insulated bedrooms with private attached bathrooms, providing a warm and secure sanctuary against the dark, mysterious jungle outside.</p>
             </div>
             <div class="amenity-card">
                 <i class="fa-solid fa-utensils"></i>
                 <h3>In-House Restaurant</h3>
-                <p>Hearty, hot local meals served fresh inside our secure dining area, letting you enjoy authentic flavors while the winds howl outside.</p>
+                <p>Fresh, piping-hot meals prepared daily in our indoor dining space, allowing you to enjoy comforting food while the forest winds howl through the trees.</p>
             </div>
             <div class="amenity-card">
                 <i class="fa-solid fa-moon"></i>
-                <h3>Mysterious Night Vibe</h3>
-                <p>Unmatched bone-chilling darkness, campfire setups, and authentic jungle ambiance for thrill-seekers looking for an edge-of-civilization experience.</p>
+                <h3>Mysterious Nightlife</h3>
+                <p>Experience an authentic, spine-tingling jungle night where absolute darkness, thick canopies, and wild animal movements create an unforgettable thrill.</p>
             </div>
         </div>
     </section>
@@ -470,28 +474,28 @@
     <!-- Location Highlights -->
     <section id="location">
         <h2 class="section-title">Deep Forest <span>Coordinates</span></h2>
-        <p class="section-subtitle">Isolated, yet close to sacred local landmarks</p>
+        <p class="section-subtitle">Deep inside Bodagonj, Jalpaiguri, touching holy and wild frontiers</p>
 
         <div class="location-box">
             <div class="location-item">
-                <i class="fa-solid fa-location-dot"></i>
+                <i class="fa-solid fa-map-location-dot"></i>
                 <div>
                     <h4>Bodagonj, Jalpaiguri, West Bengal</h4>
-                    <p>Buried deep in the fringes of the legendary Baikunthapur Forest ecosystem.</p>
+                    <p>Buried deep within the dense green pockets of the Baikunthapur Forest ecosystem.</p>
                 </div>
             </div>
             <div class="location-item">
                 <i class="fa-solid fa-place-of-worship"></i>
                 <div>
                     <h4>3 km from Bhramri Devi Temple</h4>
-                    <p>Located just 3 kilometers from the holy Bhramri Devi Temple, providing a spiritual contrast to the surrounding wilderness.</p>
+                    <p>Just a 3-kilometer stretch through the green trails to reach the sacred Bhramri Devi Temple.</p>
                 </div>
             </div>
             <div class="location-item">
                 <i class="fa-solid fa-paw"></i>
                 <div>
-                    <h4>Wildlife Corridor</h4>
-                    <p>Directly in elephant tracking territory—extreme caution and absolute thrills guaranteed after sundown.</p>
+                    <h4>Wild Elephant Territory</h4>
+                    <p>Located directly in an active wildlife pathway—extreme natural closeness to untamed elephants and dense flora.</p>
                 </div>
             </div>
         </div>
@@ -499,18 +503,18 @@
 
     <!-- Contact / Booking Section -->
     <section id="contact">
-        <h2 class="section-title">Dare to <span>Visit?</span></h2>
-        <p class="section-subtitle">Secure your stay for the ultimate jungle and tea garden getaway</p>
+        <h2 class="section-title">Book Your <span>Green Escape</span></h2>
+        <p class="section-subtitle">Only 3 private rooms available for true nature and wildlife seekers</p>
         
-        <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--light); padding: 40px; border-radius: 6px; border: 1px solid rgba(194, 155, 56, 0.2);">
-            <p style="margin-bottom: 30px; color: #bbb;">With only 3 bedrooms available, slots fill up fast for travelers seeking raw forest nights and moonlight pool sessions.</p>
+        <div style="max-width: 600px; margin: 0 auto; text-align: center; background: var(--card-bg); padding: 40px; border-radius: 6px; border: 1px solid rgba(82, 183, 136, 0.3);">
+            <p style="margin-bottom: 30px; color: var(--text-muted);">Step away from civilization. Call or email to secure your stay among the tea gardens and deep jungle canopy.</p>
             <div style="font-size: 18px; margin-bottom: 15px; color: #fff;">
-                <i class="fa-solid fa-phone" style="color: var(--secondary); margin-right: 10px;"></i> <strong>Phone:</strong> +91 XXXXX XXXXX
+                <i class="fa-solid fa-phone" style="color: var(--moss-green); margin-right: 10px;"></i> <strong>Phone:</strong> +91 XXXXX XXXXX
             </div>
             <div style="font-size: 18px; margin-bottom: 30px; color: #fff;">
-                <i class="fa-solid fa-envelope" style="color: var(--secondary); margin-right: 10px;"></i> <strong>Email:</strong> wildstay@brishtibariresort.com
+                <i class="fa-solid fa-envelope" style="color: var(--moss-green); margin-right: 10px;"></i> <strong>Email:</strong> greenstay@brishtibariresort.com
             </div>
-            <a href="tel:+910000000000" class="btn"><i class="fa-solid fa-headset" style="margin-right: 8px;"></i> Call to Book Room</a>
+            <a href="tel:+910000000000" class="btn"><i class="fa-solid fa-headset" style="margin-right: 8px;"></i> Call to Book</a>
         </div>
     </section>
 
@@ -519,24 +523,24 @@
         <div class="footer-content">
             <div class="footer-col">
                 <h3>Brishtibari Resort</h3>
-                <p>A bone-chilling, mysterious jungle and tea garden sanctuary nestled in Bodagonj, Jalpaiguri, right beside the wild Baikunthapur Forest.</p>
+                <p>A deeply immersive green sanctuary nestled in the tea gardens and dense Baikunthapur Forest of Bodagonj, Jalpaiguri.</p>
             </div>
             <div class="footer-col">
-                <h3>Quick Links</h3>
-                <a href="#about">The Jungle & Wildlife</a>
-                <a href="#pool">The Night Pool</a>
-                <a href="#amenities">Rooms & Restaurant</a>
+                <h3>Quick Navigation</h3>
+                <a href="#about">The Green Canopy</a>
+                <a href="#pool">Emerald Pool</a>
+                <a href="#amenities">Sanctuary Rooms</a>
                 <a href="#contact">Reservations</a>
             </div>
             <div class="footer-col">
                 <h3>Wilderness Info</h3>
-                <p>Wild Elephant Territory</p>
+                <p>Wild Elephant Habitats</p>
                 <p>Bodagonj, Jalpaiguri, WB</p>
                 <p>3km from Bhramri Devi Temple</p>
             </div>
         </div>
         <div class="copyright">
-            <p>&copy; 2026 Brishtibari Resort. All Rights Reserved. Enter at your own thrill.</p>
+            <p>&copy; 2026 Brishtibari Resort. All Rights Reserved. Experience the raw green wilderness.</p>
         </div>
     </footer>
 
