@@ -358,6 +358,76 @@
             margin-top: 4px;
         }
 
+        /* Map Pointer Section (Matching Style) */
+        .map-section-card {
+            background: #11281c;
+            border: 1px solid rgba(82, 183, 136, 0.25);
+            border-radius: 12px;
+            padding: 40px;
+            max-width: 650px;
+            margin: 0 auto 60px auto;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.6);
+        }
+
+        .map-container-custom {
+            position: relative;
+            width: 100%;
+            height: 380px;
+            background: #0d2216;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(82, 183, 136, 0.15);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-svg-bg {
+            width: 85%;
+            height: 85%;
+            opacity: 0.85;
+        }
+
+        /* Pointer Labels Overlay */
+        .map-label {
+            position: absolute;
+            font-size: 13px;
+            color: #c1d3c4;
+            font-weight: 500;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .map-label span {
+            display: block;
+            font-size: 11px;
+            color: var(--moss-green);
+            font-weight: 600;
+        }
+
+        .map-btn-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #f1faee;
+            color: var(--forest-deep);
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .map-btn-link:hover {
+            background: var(--moss-green);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
         /* Amenities Grid */
         .amenities-grid {
             display: grid;
@@ -496,8 +566,7 @@
                 <li><a href="#about">The Canopy</a></li>
                 <li><a href="#pool">Jungle Pool</a></li>
                 <li><a href="#prices">Prices</a></li>
-                <li><a href="#amenities">Rooms</a></li>
-                <li><a href="#location">Location</a></li>
+                <li><a href="#location">Location & Map</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -595,34 +664,46 @@
         </div>
     </section>
 
-    <!-- Rooms & Amenities Grid -->
-    <section id="amenities">
-        <h2 class="section-title">Green Sanctuary <span>Amenities</span></h2>
-        <p class="section-subtitle">Comfortable shelter built seamlessly into the wilderness</p>
-        
-        <div class="amenities-grid">
-            <div class="amenity-card">
-                <i class="fa-solid fa-house-chimney-window"></i>
-                <h3>3 Forest-View Bedrooms</h3>
-                <p>Three cozy, heavily-insulated bedrooms with private attached bathrooms, providing a warm and secure sanctuary against the dark, mysterious jungle outside.</p>
-            </div>
-            <div class="amenity-card">
-                <i class="fa-solid fa-utensils"></i>
-                <h3>In-House Restaurant</h3>
-                <p>Fresh, piping-hot meals prepared daily with varied menu options, allowing you to enjoy comforting food while the forest winds howl through the trees.</p>
-            </div>
-            <div class="amenity-card">
-                <i class="fa-solid fa-moon"></i>
-                <h3>Mysterious Nightlife</h3>
-                <p>Experience an authentic, spine-tingling jungle night where absolute darkness, thick canopies, and wild animal movements create an unforgettable thrill.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Location Highlights -->
+    <!-- Location & Map Pointer Section -->
     <section id="location">
-        <h2 class="section-title">Deep Forest <span>Coordinates</span></h2>
-        <p class="section-subtitle">Deep inside Bodagonj, Jalpaiguri, touching holy and wild frontiers</p>
+        <h2 class="section-title">Reaching <span>Brishtibari</span></h2>
+        <p class="section-subtitle">Located right beside the Bhramri Devi Temple & Baikunthapur Forest, Bodagonj</p>
+
+        <div class="map-section-card">
+            <!-- Custom India Map & Destination Pointer UI -->
+            <div class="map-container-custom">
+                <!-- SVG India Map Outline -->
+                <svg class="map-svg-bg" viewBox="0 0 450 450" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Simplified stylized India map path outline -->
+                    <path d="M210,40 C230,45 250,55 260,70 C275,75 290,85 305,95 C320,105 340,110 355,125 C370,130 380,145 375,165 C370,180 355,185 345,200 C335,215 340,230 350,245 C345,260 330,270 320,285 C310,295 295,300 285,315 C270,330 255,345 240,360 C230,375 215,390 200,405 C185,390 170,375 160,355 C150,340 135,330 125,315 C115,300 100,295 90,280 C80,265 85,250 95,235 C105,220 120,210 130,195 C140,180 135,165 145,150 C155,135 170,120 180,105 C190,90 200,60 210,40 Z" fill="#173822" stroke="#52b788" stroke-width="2"/>
+                    
+                    <!-- Dashed Pointer Lines converging to Bodagonj (North Bengal ~ coordinates X:335, Y:130) -->
+                    <line x1="120" y1="280" x2="335" y2="130" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/>
+                    <line x1="220" y1="360" x2="335" y2="130" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/>
+                    <line x1="390" y1="220" x2="335" y2="130" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/>
+                    <line x1="280" y1="80" x2="335" y2="130" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+                    <!-- Destination Target Pulse Ring -->
+                    <circle cx="335" cy="130" r="10" fill="none" stroke="#d4af37" stroke-width="1.5" opacity="0.8"/>
+                    <circle cx="335" cy="130" r="4" fill="#d4af37"/>
+                </svg>
+
+                <!-- Hub Labels matching reference style -->
+                <div class="map-label" style="top: 22%; left: 52%;">Siliguri <span>38 km</span></div>
+                <div class="map-label" style="top: 15%; left: 70%;">Jalpaiguri <span>20 km</span></div>
+                <div class="map-label" style="top: 55%; left: 15%;">Bagdogra <span>47 km</span></div>
+                <div class="map-label" style="top: 72%; left: 35%;">New Jalpaiguri <span>31 km</span></div>
+
+                <!-- Destination Label at Bodagonj / Temple -->
+                <div class="map-label" style="top: 36%; right: 12%; color: #d4af37; font-weight: 700;">
+                    Bhramri Devi Temple <span style="color:#f1faee;">Bodagonj (3km)</span>
+                </div>
+            </div>
+
+            <a href="https://maps.google.com/?q=Bhramri+Devi+Temple+Bodaganj+Jalpaiguri" target="_blank" class="map-btn-link">
+                See on Google Maps <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
 
         <div class="location-box">
             <div class="location-item">
@@ -645,6 +726,30 @@
                     <h4>Wild Elephant Territory</h4>
                     <p>Located directly in an active wildlife pathway—extreme natural closeness to untamed elephants and dense flora.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms & Amenities Grid -->
+    <section id="amenities">
+        <h2 class="section-title">Green Sanctuary <span>Amenities</span></h2>
+        <p class="section-subtitle">Comfortable shelter built seamlessly into the wilderness</p>
+        
+        <div class="amenities-grid">
+            <div class="amenity-card">
+                <i class="fa-solid fa-house-chimney-window"></i>
+                <h3>3 Forest-View Bedrooms</h3>
+                <p>Three cozy, heavily-insulated bedrooms with private attached bathrooms, providing a warm and secure sanctuary against the dark, mysterious jungle outside.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fa-solid fa-utensils"></i>
+                <h3>In-House Restaurant</h3>
+                <p>Fresh, piping-hot meals prepared daily with varied menu options, allowing you to enjoy comforting food while the forest winds howl through the trees.</p>
+            </div>
+            <div class="amenity-card">
+                <i class="fa-solid fa-moon"></i>
+                <h3>Mysterious Nightlife</h3>
+                <p>Experience an authentic, spine-tingling jungle night where absolute darkness, thick canopies, and wild animal movements create an unforgettable thrill.</p>
             </div>
         </div>
     </section>
@@ -678,6 +783,7 @@
                 <a href="#about">The Green Canopy</a>
                 <a href="#pool">Emerald Pool</a>
                 <a href="#prices">Prices & Packages</a>
+                <a href="#location">Location & Map</a>
                 <a href="#contact">Reservations</a>
             </div>
             <div class="footer-col">
