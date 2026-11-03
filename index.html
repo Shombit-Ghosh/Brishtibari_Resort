@@ -121,7 +121,7 @@
             color: var(--moss-green);
         }
 
-        /* Slide-out Menu Panel */
+        /* Slide-out Menu Panel (Scrollable) */
         .side-menu {
             position: fixed;
             top: 0;
@@ -136,6 +136,7 @@
             padding: 30px 20px;
             display: flex;
             flex-direction: column;
+            overflow-y: auto; /* Makes the slide-out menu fully scrollable */
         }
 
         .side-menu.active {
@@ -149,6 +150,7 @@
             margin-bottom: 30px;
             border-bottom: 1px solid rgba(82, 183, 136, 0.2);
             padding-bottom: 15px;
+            flex-shrink: 0;
         }
 
         .side-menu-header h3 {
@@ -174,6 +176,7 @@
             display: flex;
             flex-direction: column;
             gap: 15px;
+            padding-bottom: 20px;
         }
 
         .side-menu-links a {
@@ -182,7 +185,7 @@
             font-size: 15px;
             text-transform: uppercase;
             letter-spacing: 1px;
-            padding: 10px 15px;
+            padding: 12px 15px;
             border-radius: 4px;
             background: rgba(19, 46, 30, 0.5);
             border: 1px solid rgba(82, 183, 136, 0.15);
@@ -807,7 +810,7 @@
 </head>
 <body>
 
-    <!-- Slide-out Navigation Drawer -->
+    <!-- Slide-out Navigation Drawer (Scrollable) -->
     <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
     <div class="side-menu" id="sideMenu">
         <div class="side-menu-header">
@@ -877,7 +880,7 @@
                 <p>When rain falls through the thick overhead canopy, the forest comes alive with the earthy scent of wet moss and rustling leaves. By night, the dense foliage creates an eerily quiet, mysterious ambiance, far removed from the noise of civilization.</p>
             </div>
             <div class="about-img">
-                <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80" alt="Dense green forest canopy">
+                <img src="https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80" alt="Dense green forest canopy" loading="lazy">
             </div>
         </div>
     </section>
@@ -895,7 +898,7 @@
                 <div class="slider-track" id="sliderTrack">
                     <!-- Slide 1 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.51.36 PM.jpeg" alt="Bedroom View - Bedding and Headboard">
+                        <img src="WhatsApp Image 2026-11-02 at 7.51.36 PM.jpeg" alt="Bedroom View - Bedding and Headboard" loading="lazy">
                         <div class="slide-caption">
                             Comfortable Forest Bedroom Suite
                             <span>Cozy double bed with clean linen and tufted headboard</span>
@@ -903,7 +906,7 @@
                     </div>
                     <!-- Slide 2 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.51.42 PM.jpeg" alt="Bedroom Interior with Wooden Flooring">
+                        <img src="WhatsApp Image 2026-11-02 at 7.51.42 PM.jpeg" alt="Bedroom Interior with Wooden Flooring" loading="lazy">
                         <div class="slide-caption">
                             Room Interior & Window View
                             <span>Rich wooden flooring with natural sunlight filtering through curtains</span>
@@ -911,7 +914,7 @@
                     </div>
                     <!-- Slide 3 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.52.01 PM.jpeg" alt="Modern Bathroom Interior">
+                        <img src="WhatsApp Image 2026-11-02 at 7.52.01 PM.jpeg" alt="Modern Bathroom Interior" loading="lazy">
                         <div class="slide-caption">
                             Attached Modern Bathroom
                             <span>Clean marble-patterned tiles with premium fixtures</span>
@@ -919,7 +922,7 @@
                     </div>
                     <!-- Slide 4 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.55.45 PM.jpeg" alt="Bedroom Wide Angle View">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.45 PM.jpeg" alt="Bedroom Wide Angle View" loading="lazy">
                         <div class="slide-caption">
                             Spacious Room Setup
                             <span>Warm ambiance built for relaxation after a jungle trail</span>
@@ -927,7 +930,7 @@
                     </div>
                     <!-- Slide 5 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.55.46 PM.jpeg" alt="Bathroom Washbasin Area">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.46 PM.jpeg" alt="Bathroom Washbasin Area" loading="lazy">
                         <div class="slide-caption">
                             Bathroom Vanity & Mirror
                             <span>Spotless sink, mirror, and modern sanitation amenities</span>
@@ -935,7 +938,7 @@
                     </div>
                     <!-- Slide 6 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.55.51 PM.jpeg" alt="Bedroom Bed Details">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.51 PM.jpeg" alt="Bedroom Bed Details" loading="lazy">
                         <div class="slide-caption">
                             Cozy Bed Setup
                             <span>Freshly prepared sheets with peaceful surroundings</span>
@@ -943,7 +946,7 @@
                     </div>
                     <!-- Slide 7 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.55.61 PM.jpeg" alt="Additional Bedroom Angle">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.61 PM.jpeg" alt="Additional Bedroom Angle" loading="lazy">
                         <div class="slide-caption">
                             Peaceful Retreat
                             <span>Designed to keep you warm and secure in the deep forest</span>
@@ -982,7 +985,7 @@
                 <div class="slider-track" id="scenicTrack">
                     <!-- Scenic Slide 1 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.51.31 PM.jpeg" alt="Tea Garden Landscape">
+                        <img src="WhatsApp Image 2026-11-02 at 7.51.31 PM.jpeg" alt="Tea Garden Landscape" loading="lazy">
                         <div class="slide-caption">
                             Tea Garden Vista
                             <span>Endless green tea bushes and open skies surrounding the property</span>
@@ -990,7 +993,7 @@
                     </div>
                     <!-- Scenic Slide 2 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.54.30 PM.jpeg" alt="Resort Pathway and Walkway">
+                        <img src="WhatsApp Image 2026-11-02 at 7.54.30 PM.jpeg" alt="Resort Pathway and Walkway" loading="lazy">
                         <div class="slide-caption">
                             Resort Walkway
                             <span>Beautifully paved colorful pathways winding through greenery</span>
@@ -998,7 +1001,7 @@
                     </div>
                     <!-- Scenic Slide 3 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.55.49 PM.jpeg" alt="Poolside Tea Garden View">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.49 PM.jpeg" alt="Poolside Tea Garden View" loading="lazy">
                         <div class="slide-caption">
                             Poolside Horizon
                             <span>Stunning panoramic views of tea plantations overlooking the pool deck</span>
@@ -1006,7 +1009,7 @@
                     </div>
                     <!-- Scenic Slide 4 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.56.03 PM.jpeg" alt="Resort Building Amidst Tea Gardens">
+                        <img src="WhatsApp Image 2026-11-02 at 7.56.03 PM.jpeg" alt="Resort Building Amidst Tea Gardens" loading="lazy">
                         <div class="slide-caption">
                             Resort Property in Nature
                             <span>Our welcoming guest house nestled directly within the tea foliage</span>
@@ -1014,7 +1017,7 @@
                     </div>
                     <!-- Scenic Slide 5 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.56.06 PM.jpeg" alt="Clear Blue Sky Over Forest">
+                        <img src="WhatsApp Image 2026-11-02 at 7.56.06 PM.jpeg" alt="Clear Blue Sky Over Forest" loading="lazy">
                         <div class="slide-caption">
                             Azure Skies & Canopy
                             <span>Bright fluffy clouds and pristine air over Baikunthapur forest</span>
@@ -1022,7 +1025,7 @@
                     </div>
                     <!-- Scenic Slide 6 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.56.12 PM.jpeg" alt="Tall Trees and Greenery">
+                        <img src="WhatsApp Image 2026-11-02 at 7.56.12 PM.jpeg" alt="Tall Trees and Greenery" loading="lazy">
                         <div class="slide-caption">
                             Ancient Forest Trees
                             <span>Towering indigenous trees standing tall alongside cultivated tea gardens</span>
@@ -1030,7 +1033,7 @@
                     </div>
                     <!-- Scenic Slide 7 -->
                     <div class="slide">
-                        <img src="WhatsApp Image 2026-11-02 at 7.57.02 PM.jpeg" alt="Framed Forest View">
+                        <img src="WhatsApp Image 2026-11-02 at 7.57.02 PM.jpeg" alt="Framed Forest View" loading="lazy">
                         <div class="slide-caption">
                             Framed Wilderness View
                             <span>Looking out towards the resort through natural branches</span>
@@ -1068,8 +1071,8 @@
             
             <!-- Two Selected Pool Images Gallery -->
             <div class="pool-gallery">
-                <img src="WhatsApp Image 2026-11-02 at 7.50.26 PM.jpeg" alt="Brishtibari Resort Pool View">
-                <img src="WhatsApp Image 2026-11-02 at 7.50.49 PM.jpeg" alt="Poolside and Tree Canopy View">
+                <img src="WhatsApp Image 2026-11-02 at 7.50.26 PM.jpeg" alt="Brishtibari Resort Pool View" loading="lazy">
+                <img src="WhatsApp Image 2026-11-02 at 7.50.49 PM.jpeg" alt="Poolside and Tree Canopy View" loading="lazy">
             </div>
         </div>
     </section>
@@ -1311,7 +1314,7 @@
                 });
             });
 
-            // Auto-slide every 5 seconds
+            // Auto-slide every 6 seconds
             setInterval(() => {
                 let nextIndex = (currentIndex + 1) % slides.length;
                 updateSlide(nextIndex);
