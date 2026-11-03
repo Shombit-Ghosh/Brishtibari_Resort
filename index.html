@@ -256,7 +256,7 @@
 
         .slide img {
             width: 100%;
-            height: 420px;
+            height: 480px;
             object-fit: cover;
             display: block;
         }
@@ -310,6 +310,7 @@
             justify-content: center;
             gap: 10px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
         .dot {
@@ -730,34 +731,66 @@
         <div class="room-slider-showcase">
             <div class="pool-content" style="margin-bottom: 30px;">
                 <h3>Rooms & Bathroom Sanctuary</h3>
-                <p>Explore our cozy, heavily-insulated forest-view bedrooms and clean attached bathrooms designed for comfort and warmth amidst the wilderness.</p>
+                <p>Browse through actual photos of our cozy bedrooms with pristine wooden flooring and attached modern tile bathrooms.</p>
             </div>
 
             <!-- Image Slider Component -->
             <div class="slider-container" id="roomSlider">
                 <div class="slider-track" id="sliderTrack">
-                    <!-- Slide 1: Master Bedroom View -->
+                    <!-- Slide 1 -->
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=1200&q=80" alt="Cozy Forest-View Bedroom">
+                        <img src="WhatsApp Image 2026-11-02 at 7.51.36 PM.jpeg" alt="Bedroom View - Bedding and Headboard">
                         <div class="slide-caption">
-                            Cozy Forest-View Bedroom
-                            <span>Warm wooden interiors overlooking the green canopy</span>
+                            Comfortable Forest Bedroom Suite
+                            <span>Cozy double bed with clean linen and tufted headboard</span>
                         </div>
                     </div>
-                    <!-- Slide 2: Alternative Bedroom Angle -->
+                    <!-- Slide 2 -->
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=1200&q=80" alt="Resort Bedroom Interior">
+                        <img src="WhatsApp Image 2026-11-02 at 7.51.42 PM.jpeg" alt="Bedroom Interior with Wooden Flooring">
                         <div class="slide-caption">
-                            Comfortable Overnight Suite
-                            <span>Peaceful sanctuary against the mysterious jungle nights</span>
+                            Room Interior & Window View
+                            <span>Rich wooden flooring with natural sunlight filtering through curtains</span>
                         </div>
                     </div>
-                    <!-- Slide 3: Bathroom View -->
+                    <!-- Slide 3 -->
                     <div class="slide">
-                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1200&q=80" alt="Modern Attached Bathroom">
+                        <img src="WhatsApp Image 2026-11-02 at 7.52.01 PM.jpeg" alt="Modern Bathroom Interior">
                         <div class="slide-caption">
-                            Modern Attached Bathroom
-                            <span>Spotless fixtures, running hot water, and essential amenities</span>
+                            Attached Modern Bathroom
+                            <span>Clean marble-patterned tiles with premium fixtures</span>
+                        </div>
+                    </div>
+                    <!-- Slide 4 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.45 PM.jpeg" alt="Bedroom Wide Angle View">
+                        <div class="slide-caption">
+                            Spacious Room Setup
+                            <span>Warm ambiance built for relaxation after a jungle trail</span>
+                        </div>
+                    </div>
+                    <!-- Slide 5 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.46 PM.jpeg" alt="Bathroom Washbasin Area">
+                        <div class="slide-caption">
+                            Bathroom Vanity & Mirror
+                            <span>Spotless sink, mirror, and modern sanitation amenities</span>
+                        </div>
+                    </div>
+                    <!-- Slide 6 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.51 PM.jpeg" alt="Bedroom Bed Details">
+                        <div class="slide-caption">
+                            Cozy Bed Setup
+                            <span>Freshly prepared sheets with peaceful surroundings</span>
+                        </div>
+                    </div>
+                    <!-- Slide 7 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.61 PM.jpeg" alt="Additional Bedroom Angle">
+                        <div class="slide-caption">
+                            Peaceful Retreat
+                            <span>Designed to keep you warm and secure in the deep forest</span>
                         </div>
                     </div>
                 </div>
@@ -772,6 +805,10 @@
                 <div class="dot active" data-slide="0"></div>
                 <div class="dot" data-slide="1"></div>
                 <div class="dot" data-slide="2"></div>
+                <div class="dot" data-slide="3"></div>
+                <div class="dot" data-slide="4"></div>
+                <div class="dot" data-slide="5"></div>
+                <div class="dot" data-slide="6"></div>
             </div>
         </div>
     </section>
@@ -1020,7 +1057,7 @@
             });
         });
 
-        // Optional auto-slide every 5 seconds
+        // Auto-slide every 5 seconds
         setInterval(() => {
             let nextIndex = (currentIndex + 1) % slides.length;
             updateSlide(nextIndex);
