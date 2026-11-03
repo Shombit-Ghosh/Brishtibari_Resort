@@ -58,6 +58,34 @@
             justify-content: space-between;
             align-items: center;
             padding: 20px;
+            position: relative;
+        }
+
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        /* Three Line Hamburger Toggle */
+        .menu-toggle {
+            background: transparent;
+            border: 1px solid rgba(82, 183, 136, 0.4);
+            color: var(--moss-green);
+            font-size: 20px;
+            width: 42px;
+            height: 42px;
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background: var(--moss-green);
+            color: var(--forest-deep);
         }
 
         .logo {
@@ -91,6 +119,107 @@
 
         .nav-links a:hover {
             color: var(--moss-green);
+        }
+
+        /* Slide-out Menu Panel */
+        .side-menu {
+            position: fixed;
+            top: 0;
+            left: -320px;
+            width: 300px;
+            height: 100%;
+            background: #0d2215;
+            border-right: 1px solid rgba(82, 183, 136, 0.3);
+            z-index: 2000;
+            box-shadow: 5px 0 30px rgba(0,0,0,0.8);
+            transition: left 0.4s ease-in-out;
+            padding: 30px 20px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .side-menu.active {
+            left: 0;
+        }
+
+        .side-menu-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-bottom: 1px solid rgba(82, 183, 136, 0.2);
+            padding-bottom: 15px;
+        }
+
+        .side-menu-header h3 {
+            font-size: 18px;
+            color: var(--moss-green);
+        }
+
+        .side-menu-close {
+            background: transparent;
+            border: none;
+            color: var(--text-light);
+            font-size: 22px;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .side-menu-close:hover {
+            color: var(--moss-green);
+        }
+
+        .side-menu-links {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .side-menu-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 10px 15px;
+            border-radius: 4px;
+            background: rgba(19, 46, 30, 0.5);
+            border: 1px solid rgba(82, 183, 136, 0.15);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s;
+        }
+
+        .side-menu-links a i {
+            color: var(--moss-green);
+            width: 20px;
+        }
+
+        .side-menu-links a:hover {
+            background: var(--moss-green);
+            color: var(--forest-deep);
+        }
+
+        .side-menu-links a:hover i {
+            color: var(--forest-deep);
+        }
+
+        .menu-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(7, 20, 12, 0.8);
+            backdrop-filter: blur(4px);
+            z-index: 1500;
+        }
+
+        .menu-overlay.active {
+            display: block;
         }
 
         /* Hero Section */
@@ -325,111 +454,6 @@
 
         .dot.active {
             background: var(--moss-green);
-        }
-
-        /* Scenic Views & Resort Gallery Section */
-        .scenic-gallery-section {
-            background: linear-gradient(135deg, var(--card-bg), var(--forest-mid));
-            border: 1px solid rgba(82, 183, 136, 0.3);
-            border-radius: 8px;
-            padding: 50px;
-            margin-bottom: 60px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
-
-        .scenic-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .scenic-card {
-            position: relative;
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid rgba(82, 183, 136, 0.3);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-            cursor: pointer;
-            background: var(--forest-deep);
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-
-        .scenic-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--moss-green);
-        }
-
-        .scenic-card img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-            transition: transform 0.5s ease;
-        }
-
-        .scenic-card:hover img {
-            transform: scale(1.06);
-        }
-
-        .scenic-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(7,20,12,0.9), transparent);
-            padding: 20px 15px 15px 15px;
-            color: #fff;
-        }
-
-        .scenic-overlay h4 {
-            font-size: 16px;
-            color: #fff;
-            margin-bottom: 3px;
-        }
-
-        .scenic-overlay p {
-            font-size: 12px;
-            color: var(--moss-green);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        /* Lightbox Modal */
-        .lightbox-modal {
-            display: none;
-            position: fixed;
-            z-index: 2000;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(7, 20, 12, 0.95);
-            backdrop-filter: blur(8px);
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        .lightbox-modal img {
-            max-width: 90%;
-            max-height: 85vh;
-            border-radius: 6px;
-            border: 1px solid rgba(82, 183, 136, 0.5);
-            box-shadow: 0 0 30px rgba(0,0,0,0.8);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 25px;
-            right: 35px;
-            color: #fff;
-            font-size: 35px;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
-
-        .lightbox-close:hover {
-            color: var(--moss-green);
         }
 
         /* Main Attraction: Pool Showcase & Photo Gallery */
@@ -768,7 +792,7 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .about-grid, .pool-gallery {
                 grid-template-columns: 1fr;
             }
@@ -783,17 +807,42 @@
 </head>
 <body>
 
+    <!-- Slide-out Navigation Drawer -->
+    <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
+    <div class="side-menu" id="sideMenu">
+        <div class="side-menu-header">
+            <h3>Site Sections</h3>
+            <button class="side-menu-close" onclick="toggleMenu()"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="side-menu-links">
+            <li><a href="#about" onclick="toggleMenu()"><i class="fa-solid fa-tree"></i> The Canopy</a></li>
+            <li><a href="#rooms-showcase" onclick="toggleMenu()"><i class="fa-solid fa-bed"></i> Rooms & Bathrooms</a></li>
+            <li><a href="#scenic-gallery" onclick="toggleMenu()"><i class="fa-solid fa-mountain-sun"></i> Scenery & Views</a></li>
+            <li><a href="#pool" onclick="toggleMenu()"><i class="fa-solid fa-water-ladder"></i> Jungle Pool</a></li>
+            <li><a href="#prices" onclick="toggleMenu()"><i class="fa-solid fa-indian-rupee-sign"></i> Prices & Tariffs</a></li>
+            <li><a href="#location" onclick="toggleMenu()"><i class="fa-solid fa-map"></i> West Bengal Map</a></li>
+            <li><a href="#amenities" onclick="toggleMenu()"><i class="fa-solid fa-house-chimney"></i> Amenities</a></li>
+            <li><a href="#contact" onclick="toggleMenu()"><i class="fa-solid fa-headset"></i> Contact & Booking</a></li>
+        </ul>
+    </div>
+
     <!-- Header -->
     <header>
         <div class="nav-container">
-            <div class="logo">Brishtibari <span>Resort</span></div>
+            <div class="nav-left">
+                <!-- Three-Line Hamburger Button -->
+                <button class="menu-toggle" id="menuToggle" onclick="toggleMenu()" title="View All Sections">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="logo">Brishtibari <span>Resort</span></div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#about">The Canopy</a></li>
-                <li><a href="#rooms-showcase">Rooms & Bathrooms</a></li>
-                <li><a href="#scenic-gallery">Scenery & Views</a></li>
-                <li><a href="#pool">Jungle Pool</a></li>
+                <li><a href="#rooms-showcase">Rooms</a></li>
+                <li><a href="#scenic-gallery">Scenery</a></li>
+                <li><a href="#pool">Pool</a></li>
                 <li><a href="#prices">Prices</a></li>
-                <li><a href="#location">West Bengal Map</a></li>
+                <li><a href="#location">Map</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -920,80 +969,92 @@
         </div>
     </section>
 
-    <!-- Scenic Views & Resort Gallery Section -->
+    <!-- Scenic Views & Resort Sliding Gallery Section -->
     <section id="scenic-gallery">
-        <div class="scenic-gallery-section">
+        <div class="room-slider-showcase">
             <div class="pool-content" style="margin-bottom: 30px;">
                 <h3>Scenic Views & Resort Gallery</h3>
                 <p>Take in the breathtaking vistas of lush green tea gardens, colorful walkways, and endless blue skies right from our sanctuary.</p>
             </div>
 
-            <div class="scenic-grid">
-                <!-- Scenic Card 1 -->
-                <div class="scenic-card" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="WhatsApp Image 2026-11-02 at 7.51.31 PM.jpeg" alt="Tea Garden Landscape">
-                    <div class="scenic-overlay">
-                        <h4>Tea Garden Vista</h4>
-                        <p>Endless Green Bushes & Trees</p>
+            <!-- Scenic Image Slider Component -->
+            <div class="slider-container" id="scenicSlider">
+                <div class="slider-track" id="scenicTrack">
+                    <!-- Scenic Slide 1 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.51.31 PM.jpeg" alt="Tea Garden Landscape">
+                        <div class="slide-caption">
+                            Tea Garden Vista
+                            <span>Endless green tea bushes and open skies surrounding the property</span>
+                        </div>
+                    </div>
+                    <!-- Scenic Slide 2 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.54.30 PM.jpeg" alt="Resort Pathway and Walkway">
+                        <div class="slide-caption">
+                            Resort Walkway
+                            <span>Beautifully paved colorful pathways winding through greenery</span>
+                        </div>
+                    </div>
+                    <!-- Scenic Slide 3 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.55.49 PM.jpeg" alt="Poolside Tea Garden View">
+                        <div class="slide-caption">
+                            Poolside Horizon
+                            <span>Stunning panoramic views of tea plantations overlooking the pool deck</span>
+                        </div>
+                    </div>
+                    <!-- Scenic Slide 4 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.56.03 PM.jpeg" alt="Resort Building Amidst Tea Gardens">
+                        <div class="slide-caption">
+                            Resort Property in Nature
+                            <span>Our welcoming guest house nestled directly within the tea foliage</span>
+                        </div>
+                    </div>
+                    <!-- Scenic Slide 5 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.56.06 PM.jpeg" alt="Clear Blue Sky Over Forest">
+                        <div class="slide-caption">
+                            Azure Skies & Canopy
+                            <span>Bright fluffy clouds and pristine air over Baikunthapur forest</span>
+                        </div>
+                    </div>
+                    <!-- Scenic Slide 6 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.56.12 PM.jpeg" alt="Tall Trees and Greenery">
+                        <div class="slide-caption">
+                            Ancient Forest Trees
+                            <span>Towering indigenous trees standing tall alongside cultivated tea gardens</span>
+                        </div>
+                    </div>
+                    <!-- Scenic Slide 7 -->
+                    <div class="slide">
+                        <img src="WhatsApp Image 2026-11-02 at 7.57.02 PM.jpeg" alt="Framed Forest View">
+                        <div class="slide-caption">
+                            Framed Wilderness View
+                            <span>Looking out towards the resort through natural branches</span>
+                        </div>
                     </div>
                 </div>
-                <!-- Scenic Card 2 -->
-                <div class="scenic-card" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="WhatsApp Image 2026-11-02 at 7.54.30 PM.jpeg" alt="Resort Pathway and Walkway">
-                    <div class="scenic-overlay">
-                        <h4>Resort Walkway</h4>
-                        <p>Paved Pathways Amidst Nature</p>
-                    </div>
-                </div>
-                <!-- Scenic Card 3 -->
-                <div class="scenic-card" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="WhatsApp Image 2026-11-02 at 7.55.49 PM.jpeg" alt="Poolside Tea Garden View">
-                    <div class="scenic-overlay">
-                        <h4>Poolside Horizon</h4>
-                        <p>Overlooking the Tea Plantations</p>
-                    </div>
-                </div>
-                <!-- Scenic Card 4 -->
-                <div class="scenic-card" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="WhatsApp Image 2026-11-02 at 7.56.03 PM.jpeg" alt="Resort Building Amidst Tea Gardens">
-                    <div class="scenic-overlay">
-                        <h4>Resort Property</h4>
-                        <p>Nestled in the Greenery</p>
-                    </div>
-                </div>
-                <!-- Scenic Card 5 -->
-                <div class="scenic-card" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="WhatsApp Image 2026-11-02 at 7.56.06 PM.jpeg" alt="Clear Blue Sky Over Forest">
-                    <div class="scenic-overlay">
-                        <h4>Azure Skies</h4>
-                        <p>Bright Blue Canopy Vistas</p>
-                    </div>
-                </div>
-                <!-- Scenic Card 6 -->
-                <div class="scenic-card" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="WhatsApp Image 2026-11-02 at 7.56.12 PM.jpeg" alt="Tall Trees and Greenery">
-                    <div class="scenic-overlay">
-                        <h4>Ancient Canopy</h4>
-                        <p>Towering Baikunthapur Trees</p>
-                    </div>
-                </div>
-                <!-- Scenic Card 7 -->
-                <div class="scenic-card" onclick="openLightbox(this.querySelector('img').src)">
-                    <img src="WhatsApp Image 2026-11-02 at 7.57.02 PM.jpeg" alt="Framed Forest View">
-                    <div class="scenic-overlay">
-                        <h4>Framed Wilderness</h4>
-                        <p>Natural Tree Frame over Resort</p>
-                    </div>
-                </div>
+
+                <!-- Slider Navigation Buttons -->
+                <button class="slider-btn prev" id="scenicPrevBtn"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="slider-btn next" id="scenicNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+
+            <!-- Slider Dots Indicator -->
+            <div class="slider-dots" id="scenicDots">
+                <div class="dot active" data-slide="0"></div>
+                <div class="dot" data-slide="1"></div>
+                <div class="dot" data-slide="2"></div>
+                <div class="dot" data-slide="3"></div>
+                <div class="dot" data-slide="4"></div>
+                <div class="dot" data-slide="5"></div>
+                <div class="dot" data-slide="6"></div>
             </div>
         </div>
     </section>
-
-    <!-- Lightbox Modal for Scenic Gallery -->
-    <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox()">
-        <span class="lightbox-close">&times;</span>
-        <img id="lightboxImg" src="" alt="Enlarged View">
-    </div>
 
     <!-- Main Attraction: The Swimming Pool & Photo Gallery -->
     <section id="pool">
@@ -1206,57 +1267,60 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Room Slider & Lightbox Modal -->
+    <!-- JavaScript for Sliders & Mobile Menu Drawer -->
     <script>
-        const track = document.getElementById('sliderTrack');
-        const slides = Array.from(track.children);
-        const nextButton = document.getElementById('nextBtn');
-        const prevButton = document.getElementById('prevBtn');
-        const dots = Array.from(document.getElementById('sliderDots').children);
+        // Hamburger Menu Toggle Function
+        function toggleMenu() {
+            const sideMenu = document.getElementById('sideMenu');
+            const menuOverlay = document.getElementById('menuOverlay');
+            sideMenu.classList.toggle('active');
+            menuOverlay.classList.toggle('active');
+        }
 
-        let currentIndex = 0;
+        // Generic Slider Setup Function
+        function setupSlider(trackId, prevBtnId, nextBtnId, dotsContainerId) {
+            const track = document.getElementById(trackId);
+            const slides = Array.from(track.children);
+            const nextButton = document.getElementById(nextBtnId);
+            const prevButton = document.getElementById(prevBtnId);
+            const dots = Array.from(document.getElementById(dotsContainerId).children);
 
-        function updateSlide(index) {
-            track.style.transform = `translateX(-${index * 100}%)`;
-            dots.forEach((dot, i) => {
-                dot.classList.toggle('active', i === index);
+            let currentIndex = 0;
+
+            function updateSlide(index) {
+                track.style.transform = `translateX(-${index * 100}%)`;
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+                currentIndex = index;
+            }
+
+            nextButton.addEventListener('click', () => {
+                let nextIndex = (currentIndex + 1) % slides.length;
+                updateSlide(nextIndex);
             });
-            currentIndex = index;
-        }
 
-        nextButton.addEventListener('click', () => {
-            let nextIndex = (currentIndex + 1) % slides.length;
-            updateSlide(nextIndex);
-        });
-
-        prevButton.addEventListener('click', () => {
-            let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
-            updateSlide(prevIndex);
-        });
-
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                updateSlide(index);
+            prevButton.addEventListener('click', () => {
+                let prevIndex = (currentIndex - 1 + slides.length) % slides.length;
+                updateSlide(prevIndex);
             });
-        });
 
-        // Auto-slide every 5 seconds
-        setInterval(() => {
-            let nextIndex = (currentIndex + 1) % slides.length;
-            updateSlide(nextIndex);
-        }, 5000);
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    updateSlide(index);
+                });
+            });
 
-        // Lightbox Functions for Scenic Gallery
-        function openLightbox(imgSrc) {
-            const modal = document.getElementById('lightboxModal');
-            const modalImg = document.getElementById('lightboxImg');
-            modal.style.display = 'flex';
-            modalImg.src = imgSrc;
+            // Auto-slide every 5 seconds
+            setInterval(() => {
+                let nextIndex = (currentIndex + 1) % slides.length;
+                updateSlide(nextIndex);
+            }, 6000);
         }
 
-        function closeLightbox() {
-            document.getElementById('lightboxModal').style.display = 'none';
-        }
+        // Initialize Room Slider and Scenic Slider
+        setupSlider('sliderTrack', 'prevBtn', 'nextBtn', 'sliderDots');
+        setupSlider('scenicTrack', 'scenicPrevBtn', 'scenicNextBtn', 'scenicDots');
     </script>
 
 </body>
